@@ -1,0 +1,62 @@
+model:
+  depth: 12
+  dim: 768
+  queries_dim: 768
+  output_dim: 14
+  num_inputs: 8192
+  num_latents: 512
+  latent_dim: 16
+  heads: 12
+  dim_head: -1
+  weight_tie_layers: false
+  decoder_ff: false
+  enable_flash_attn: true
+
+backbones:
+  vae:
+    name: SparseTransformerVAE
+    args:
+      resolution: 64
+      in_channels: 1024
+      out_channels: 112
+      model_channels: 768
+      latent_channels: 8
+      num_blocks: 12
+      num_heads: 12
+      mlp_ratio: 4
+      attn_mode: swin
+      window_size: 8
+      use_fp16: true
+      use_old_attn_impl: false
+      norm_output: true
+
+framework:
+  name: SparseVAE
+  args:
+    resolution: 64
+    loss_type: l1
+    lambda_ssim: 0.2
+    lambda_lpips: 0.2
+    lamda_kl: 0.000001
+    mem_ratio: 0.2
+    representation_config:
+      MipGS:
+        lr:
+          _xyz: 1.0
+          _features_dc: 1.0
+          _opacity: 1.0
+          _scaling: 1.0
+          _rotation: 0.1
+        perturb_offset: true
+        reg_mode: soft_invoxel
+        voxel_size: 1.5
+        num_gaussians: 8
+        2d_filter_kernel_size: 0.1
+        3d_filter_kernel_size: 0.0009
+        scaling_bias: 0.004
+        opacity_bias: 0.1
+        scaling_activation: softplus
+    regularizations:
+      MipGS:
+        lambda_vol: 10000.0
+        lambda_opacity: 0.001
