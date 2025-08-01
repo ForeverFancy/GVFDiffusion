@@ -2,7 +2,7 @@
 
 By [Bowen Zhang](http://home.ustc.edu.cn/~zhangbowen), [Sicheng Xu](https://github.com/sicxu), [Chuxin Wang](https://chuxwa.github.io/), [Jiaolong Yang](https://jlyang.org/), [Feng Zhao](https://en.auto.ustc.edu.cn/2021/0616/c26828a513169/page.htm), [Dong Chen](http://www.dongchen.pro/), [Baining Guo](https://www.microsoft.com/en-us/research/people/bainguo/).
 
-[Paper]() | [Project Page](https://gvfdiffusion.github.io/) | [Code]()
+[Paper](https://arxiv.org/abs/2507.23785) | [Project Page](https://gvfdiffusion.github.io/) | [Code](https://github.com/ForeverFancy/GVFDiffusion)
 
 ## Abstract
 
@@ -99,5 +99,13 @@ This codebase is built upon [TRELLIS](), and [3dshape2vecset](). Thanks authors 
 
 If you find the work useful, please consider citing:
 ```
-
+@misc{zhang2025gaussianvariationfielddiffusion,
+        title={Gaussian Variation Field Diffusion for High-fidelity Video-to-4D Synthesis}, 
+        author={Bowen Zhang and Sicheng Xu and Chuxin Wang and Jiaolong Yang and Feng Zhao and Dong Chen and Baining Guo},
+        year={2025},
+        eprint={2507.23785},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV},
+        url={https://arxiv.org/abs/2507.23785}, 
+      }
 ```
