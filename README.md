@@ -99,13 +99,10 @@ This codebase is built upon [TRELLIS](), and [3dshape2vecset](). Thanks authors 
 
 If you find the work useful, please consider citing:
 ```
-@misc{zhang2025gaussianvariationfielddiffusion,
-        title={Gaussian Variation Field Diffusion for High-fidelity Video-to-4D Synthesis}, 
-        author={Bowen Zhang and Sicheng Xu and Chuxin Wang and Jiaolong Yang and Feng Zhao and Dong Chen and Baining Guo},
-        year={2025},
-        eprint={2507.23785},
-        archivePrefix={arXiv},
-        primaryClass={cs.CV},
-        url={https://arxiv.org/abs/2507.23785}, 
-      }
+@article{zhang2025gaussian,
+  title={Gaussian Variation Field Diffusion for High-fidelity Video-to-4D Synthesis},
+  author={Zhang, Bowen and Xu, Sicheng and Wang, Chuxin and Yang, Jiaolong and Zhao, Feng and Chen, Dong and Guo, Baining},
+  journal={arXiv preprint arXiv:2507.23785},
+  year={2025}
+}
 ```
