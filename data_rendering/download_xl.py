@@ -34,8 +34,8 @@ if __name__ == '__main__':
     if opt.instances is None:
         if opt.filter_low_aesthetic_score is not None:
             metadata = metadata[metadata['aesthetic_score'] >= opt.filter_low_aesthetic_score]
-        if 'local_path' in metadata.columns:
-            metadata = metadata[metadata['local_path'].isna()]
+        # if 'local_path' in metadata.columns:
+        #     metadata = metadata[metadata['local_path'].isna()]
     else:
         if os.path.exists(opt.instances):
             with open(opt.instances, 'r') as f:
