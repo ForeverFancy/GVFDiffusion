@@ -61,6 +61,12 @@ python render_xl.py ObjaverseXL --output_dir ./data/objaverse_4d_rendering/ --st
 
 We mainly follow the data preparation process of [TRELLIS](https://github.com/microsoft/TRELLIS/blob/main/DATASET.md) for data rendering, mesh voxelization, DINOv2 feature reprojection and encoding.
 
+Then, run the following script to extract vertex displacements:
+
+```bash
+python scripts/process_vertices.py --mesh_root ./data/objaverse_4d_rendering/ --csv_file ./data/metadata.csv --start_idx 0 --end_idx 100 --timesteps 24
+```
+
 ### Conditional Features for Diffusion Training
 
 ```bash
